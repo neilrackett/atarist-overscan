@@ -5,8 +5,6 @@ https://github.com/user-attachments/assets/1382505c-a8ce-404d-a8d7-5cc342749daf
 Extend your Atari STE's pixels beyond their limits with this overscan example
 and blitter-powered bouncy ball demo to show the extra screen space in action.
 
-The build produces three outputs:
-
 - `NONE.TOS` as a baseline mode with no overscan for comparison (320x200)
 - `VERTICAL.TOS` for top-bottom overscan (320x268)
 - `FULL.TOS` for full-screen overscan (400x268)
