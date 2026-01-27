@@ -16,14 +16,23 @@
 		.global	_scraddr2
 		.global	backbuf_flag
 		.global	_backbuf_flag
+		.global	scroll_offset
+		.global	_scroll_offset
+		.global	scroll_hpixel
+		.global	_scroll_hpixel
 
 overscan_ste_vbl:	movem.l	d0-a6,-(sp)
 
-		move.l	scraddr1,d0			|Set screen
+		move.l	scraddr1,d0			|Get completed frame (just drawn to)
+		moveq	#0,d1
+		move.w	scroll_offset,d1		|Get scroll offset
+		add.l	d1,d0				|Add to full address for parallax
 		lsr.w	#8,d0
-		move.l	d0,0xffff8200.w
+		move.l	d0,0xffff8200.w			|Set screen address
 
-		move.b	#97,0xfffffa1f.w			|Timer A data
+		move.b	scroll_hpixel,0xffff820f.w	|Set horizontal pixel scroll (STE)
+
+		move.b	#97,0xfffffa1f.w		|Timer A data
 		move.b	#4,0xfffffa19.w			|Timer A control
 
 		move.l	scraddr1,d0			|Swap screens
@@ -179,6 +188,11 @@ dummy:		rte
 
 _vblcnt:
 vblcnt:		.word	0
+_scroll_offset:
+scroll_offset:	.word	0
+_scroll_hpixel:
+scroll_hpixel:	.byte	0
+		.even
 
 		.bss
 
