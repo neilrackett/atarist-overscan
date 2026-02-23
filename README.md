@@ -5,16 +5,16 @@
 Extend your Atari STE's pixels beyond their limits with these overscan examples
 that being that extra screen space to life!
 
+| Example              | Description                                              |
+| -------------------- | -------------------------------------------------------- |
+| `blitter`            | Blitter powered bouncy ball demo                         |
+| `hardware-scrolling` | Smooth scrolling all the way to the edges of your screen |
+
 All of the examples output 3 files:
 
 - `NONE.TOS` as a baseline mode with no overscan for comparison (320x200)
 - `VERTICAL.TOS` for top-bottom overscan (320x268)
 - `FULL.TOS` for full-screen overscan (400x268)
-
-| Example              | Description                                              |
-| -------------------- | -------------------------------------------------------- |
-| `blitter`            | Blitter powered bouncy ball demo                         |
-| `hardware-scrolling` | Smooth scrolling all the way to the edges of your screen |
 
 ## Build
 
