@@ -1,19 +1,24 @@
 # Atari STE overscan
 
-https://github.com/user-attachments/assets/1382505c-a8ce-404d-a8d7-5cc342749daf
+<video src="https://github.com/user-attachments/assets/1382505c-a8ce-404d-a8d7-5cc342749daf" width="640" height="480" autoplay loop muted controls></video>
 
-Extend your Atari STE's pixels beyond their limits with this overscan example
-and blitter-powered bouncy ball demo to show the extra screen space in action.
+Extend your Atari STE's pixels beyond their limits with these overscan examples
+that being that extra screen space to life!
+
+All of the examples output 3 files:
 
 - `NONE.TOS` as a baseline mode with no overscan for comparison (320x200)
 - `VERTICAL.TOS` for top-bottom overscan (320x268)
 - `FULL.TOS` for full-screen overscan (400x268)
 
-So, why not drop the `overscan_ste_*.s` files into your own projects and give them a try!
+| Example              | Description                                              |
+| -------------------- | -------------------------------------------------------- |
+| `blitter`            | Blitter powered bouncy ball demo                         |
+| `hardware-scrolling` | Smooth scrolling all the way to the edges of your screen |
 
 ## Build
 
-You can build the examples by installing [atarist-toolkit-docker](https://github.com/sidecartridge/atarist-toolkit-docker) and running:
+You can build any of the examples by installing [atarist-toolkit-docker](https://github.com/sidecartridge/atarist-toolkit-docker) and running:
 
 ```bash
 stcmd make
@@ -25,4 +30,4 @@ Adapted from examples shared on [Atari-Forum](https://www.atari-forum.com/viewto
 
 ## License
 
-[BSD 2 Clause](LICENSE)
+[GPL v3](LICENSE)
