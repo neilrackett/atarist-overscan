@@ -7,7 +7,7 @@ that being that extra screen space to life!
 
 | Example              | Description                                              |
 | -------------------- | -------------------------------------------------------- |
-| `blitter`            | Blitter powered bouncy ball demo                         |
+| `blitter`            | Bouncy Blitter Ball                                      |
 | `hardware-scrolling` | Smooth scrolling all the way to the edges of your screen |
 
 All of the examples output 3 files:
