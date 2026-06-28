@@ -1,3 +1,6 @@
+| Copyright (C) 2026 Neil Rackett
+| SPDX-License-Identifier: GPL-2.0-or-later
+
 | Vertical-only overscan display (STe-only) support
 |
 | * Top and bottom borders removed; horizontal borders left intact

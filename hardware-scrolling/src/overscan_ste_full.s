@@ -1,3 +1,6 @@
+| Copyright (C) 2026 Neil Rackett
+| SPDX-License-Identifier: GPL-2.0-or-later
+
 | Fullscreen display (STe-only) support
 |
 | * 1 datareg wasted during the overscan

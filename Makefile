@@ -1,3 +1,6 @@
+# Copyright (C) 2026 Neil Rackett
+# SPDX-License-Identifier: GPL-2.0-or-later
+
 .PHONY: blitter hardware-scrolling all clean
 
 all: blitter hardware-scrolling

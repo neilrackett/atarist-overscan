@@ -1,3 +1,6 @@
+# Copyright (C) 2026 Neil Rackett
+# SPDX-License-Identifier: GPL-2.0-or-later
+
 CC = m68k-atari-mint-gcc
 AS = m68k-atari-mint-as -traditional
 
