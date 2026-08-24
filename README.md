@@ -5,16 +5,29 @@
 Extend your Atari STE's pixels beyond their limits with these overscan examples
 that being that extra screen space to life!
 
-| Example              | Description                                              |
-| -------------------- | -------------------------------------------------------- |
-| `blitter`            | Bouncy Blitter Ball                                      |
-| `hardware-scrolling` | Smooth scrolling all the way to the edges of your screen |
+| Example              | Description                                                  |
+| -------------------- | ------------------------------------------------------------ |
+| `blitter`            | Bouncy Blitter Ball                                          |
+| `hardware-scrolling` | Smooth scrolling all the way to the edges of your screen     |
+| `any-st`             | Vertical overscan that works on any ST, not just the STE     |
 
-All of the examples output 3 files:
+The `blitter` and `hardware-scrolling` examples are STE-only and output 3 files:
 
 - `NONE.TOS` as a baseline mode with no overscan for comparison (320x200)
 - `VERTICAL.TOS` for top-bottom overscan (320x268)
 - `FULL.TOS` for full-screen overscan (400x268)
+
+The `any-st` example uses MFP timer interrupts instead of cycle-counted code,
+so it runs on any ST model — STF, STFM, Mega ST, STE, and a Mega STE even at
+16&nbsp;MHz with the cache enabled — and outputs 3 files:
+
+- `TOP.TOS` removes the top border for up to 227 seamless lines (shown as
+  320x224); the recommended variant for a game window
+- `BOTTOM.TOS` removes the bottom border for up to 245 lines, with the caveat
+  that picture line 200 always displays as border colour, so it suits games
+  with a HUD or panel split at that height
+- `BOTH.TOS` combines the two for 271 visible lines (320x271): 227 seamless
+  lines, one line of border colour, then 44 more
 
 ## Build
 
